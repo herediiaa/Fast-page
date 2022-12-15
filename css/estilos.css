@@ -21,20 +21,23 @@ body{
     --grisOscuro:#262427;
     --blanco:#ffffff;
     --gris:#2D3039;
+    --grisFooter: #2F3640;
+    --grisTitleFooter:#616161;
     --fuentePrincipal:'Oswald', sans-serif;
 }
 a{
     text-decoration: none;
 }
 img{
-    width: 5rem;
-
+    width: 100%;
 }
 h2{
-    text-align: center;
+    color: var(--blanco);
     font-size: 2.5rem;
-    font-weight: bold;
-    
+    font-weight: bold;   
+}
+h3{
+font-size: 2rem;
 }
 .display-none{
     display: none;
@@ -56,7 +59,9 @@ h2{
     flex: 1;
     margin-left: 1.5rem;
 }
-
+.nav-brand{
+    width: 5rem;
+}
 .nav-header-principal a{
     font-size:1.7rem;
     color: var(--blanco);
@@ -127,6 +132,7 @@ h2{
     flex-direction: column;
     color: var(--blanco);
     margin-top: 1rem;
+    margin-bottom: 4rem;
 }
 .hero p{
     text-align: center;
@@ -143,3 +149,123 @@ h2{
     border: solid var(--blanco) 1px;
 }
 
+/*CAMPO ITEMS*/
+.campo-items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2.5rem;
+    color: var(--blanco);
+    margin: 3rem 0;
+}
+.item a{
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.bx{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--blanco);
+}
+@media (min-width: 770px) {
+    .campo-items{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+/*TARJETAS*/
+/*PRIMERA TARJETA*/
+.tarjeta{
+    background-image: url(../media/tech-red.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 30rem;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.tarjeta-info{
+    width: 50%;
+    margin-left: 5rem;
+    
+}
+.tarjeta-info a{
+    padding:1rem 2rem;
+    background-color: var(--grisOscuro);
+    font-size: 1.5rem;
+    color: var(--blanco);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4rem;
+    border: solid var(--blanco) 1px;
+}
+.tarjeta-info p{
+    margin: 1rem 0 2rem 0;
+    color: var(--blanco);
+}
+/*SEGUNDA TARJETA*/
+.tarjeta2{
+    background-image: url(../media/image-five.jpg);
+}
+
+/*FOLLOWS*/
+.follow-content{
+    display: flex;
+    gap: 5rem;
+    max-width: 28rem;
+    margin: 0 auto 5rem auto;
+    
+}
+.follow-content .bx{
+    font-size: 5rem;
+}
+.h2-technews{
+    text-align: center;
+    font-size:3rem;
+    margin-bottom: 1rem;
+}
+
+/*FOOTER*/
+.footer{
+    background-color: var(--grisFooter);
+}
+.listas-content{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding: 5rem 3rem 3rem 15rem;
+    gap: 3rem;
+}
+@media (min-width: 500px) {
+    .listas-content{
+        grid-template-columns: repeat(2,1fr);
+        gap:3rem;
+    }
+}
+@media (min-width: 770px) {
+    .listas-content{
+        grid-template-columns: repeat(4,1fr);
+        gap: 3rem;
+    }
+}
+.footer-lista{
+    display: flex;
+    flex-direction: column;
+}
+.footer-lista h3,
+.footer-lista a{
+    margin-bottom: 1rem;
+    color: var(--blanco);
+}
+.footer-lista h3{
+    font-weight: bold;
+}
+.footer-lista a{
+    font-size: 1.2rem;
+}
+.title-footer{
+    font-size: 2rem;
+    color: var(--grisTitleFooter);
+    text-align: center;
+    padding-bottom: 2rem;
+}
